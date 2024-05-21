@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Блок-слайдер</title>
+    <link href="https://fonts.googleapis.com/css2?family=PT+Sans:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <div class="slider">
+            <!-- Первый баннер -->
+            <div class="slide active">
+                <div class="banner" style="background-color: #FAF4EB;">
+                    <div class="text-content">
+                        <h1>Мебельные скобы 2FIX</h1>
+                        <div class="points">
+                            <ul>
+                                <li class="white-bg"><span class="dot"></span> V-образная заточка&nbsp;</li>
+                                <li class="white-bg"><span class="dot"></span> Лучшая цена и скидки оптовикам&nbsp;</li>
+                                <li class="white-bg"><span class="dot"></span> Гос.контроль ОТК (Беларусь)&nbsp;</li>
+                            </ul>
+                        </div>
+                        <button>Подобрать скобы</button>
+                    </div>
+                    <div class="image-content">
+                        <img src="https://raw.githubusercontent.com/Huggabeaar/cont/main/banner-1-new.png" alt="Мебельные скобы 2FIX">
+                    </div>
+                </div>
+            </div>
+            <!-- Второй баннер -->
+            <div class="slide">
+                <div class="banner" style="background-color: #E2EAEB;">
+                    <div class="text-content">
+                        <h1>ГРАНДИОЗНАЯ <br> РАСПРОДАЖА ТКАНЕЙ</h1>
+                        <p class="subtitle margin-45">Скидки до <span class="highlight">-50%</span></p>
+                        <div class="center"></div>
+                        <button>Перейти в каталог</button>
+                    </div>
+                    <div class="image-content">
+                        <img src="https://raw.githubusercontent.com/Huggabeaar/cont/main/banner-2-new.png" alt="ГРАНДИОЗНАЯ РАСПРОДАЖА ТКАНЕЙ">
+                    </div>
+                </div>
+            </div>
+            <!-- Третий баннер -->
+            <div class="slide">
+                <div class="banner bg-shape" style="background-color: #E2EBE2;">
+                    <div class="text-content margin-60">
+                        <div class="shape-container">
+                            <h1>Бесплатная доставка</h1>
+                            <p class="subtitle-regular">до терминала транспортной компании</p>
+                        </div>
+                        <button>Подробнее</button>
+                    </div>
+                    <div class="image-content">
+                        <img src="https://raw.githubusercontent.com/Huggabeaar/cont/main/banner-3-new.png" alt="Бесплатная доставка">
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="tabs">
+            <span class="tab active" data-index="0"></span>
+            <span class="tab" data-index="1"></span>
+            <span class="tab" data-index="2"></span>
+        </div>
+    </div>
+    <script src="scripts.js"></script>
+</body>
+</html>

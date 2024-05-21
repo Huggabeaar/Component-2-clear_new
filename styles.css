@@ -1,0 +1,266 @@
+body {
+    font-family: 'PT Sans', sans-serif;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #f5f5f5;
+}
+
+.container {
+    width: 1140px;
+    max-width: 100%;
+}
+
+.slider {
+    position: relative;
+    width: 100%;
+    height: 360px;
+    overflow: hidden;
+}
+
+.slide {
+    width: 100%;
+    height: 360px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: none;
+    opacity: 0;
+    transform: translateX(100%);
+    transition: opacity 0.5s ease, transform 0.5s ease;
+}
+
+.slide.active {
+    display: flex;
+    opacity: 1;
+    transform: translateX(0);
+}
+
+.slide.inactive {
+    transform: translateX(-100%);
+}
+
+.banner {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    border-radius: 12px;
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+.text-content {
+    max-width: 50%;
+    margin-left: 40px;
+}
+
+.text-content h1 {
+    margin: 0;
+    font-size: 40px;
+    font-weight: bold;
+}
+
+.menu-background {
+    background-color: white;
+    padding: 10px;
+    border-radius: 8px;
+    margin: 20px 0;
+}
+
+.text-content ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.text-content ul li {
+    margin-bottom: 5px;
+    font-size: 18px;
+    position: relative;
+    padding-left: 20px;
+}
+
+.text-content ul li .dot {
+    position: absolute;
+    left: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 8px;
+    height: 8px;
+    background-color: #B91F2A;
+    border-radius: 50%;
+}
+
+.text-content button {
+    background-color: #B91F2A;
+    color: #fff;
+    border: none;
+    border-radius: 100px;
+    width: 244px;
+    height: 60px;
+    cursor: pointer;
+    font-weight: bold;
+    font-size: 20px;
+}
+
+.subtitle {
+    font-size: 24px;
+    font-weight: bold;
+    margin: 20px 0;
+}
+
+.subtitle .highlight {
+    color: #EC4753;
+    font-size: 43px;
+    font-weight: bold;
+}
+
+.shape-container {
+    border-radius: 12px;
+}
+
+.shape-container-60 {
+    margin-top: 60px;
+}
+
+.image-content {
+    max-width: 50%;
+    margin-right: 40px;
+}
+
+.image-content img {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+    border-radius: 12px;
+}
+
+.tabs {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+.tab {
+    width: 12px;
+    height: 12px;
+    border: 1px solid #949494;
+    border-radius: 50%;
+    margin: 0 5px;
+    cursor: pointer;
+}
+
+.tab.active {
+    background-color: #B91F2A;
+    border: 1px solid #B91F2A;
+}
+
+.white-bg {
+    background-color: white;
+    width: max-content;
+}
+
+.points {
+    margin-top: 20px;
+    margin-bottom: 40px;
+}
+
+.bg-shape {
+    background: url('https://raw.githubusercontent.com/Huggabeaar/cont/main/bg-shape-new.png');
+}
+
+.subtitle-regular {
+    font-weight: 400;
+    font-size: 24px;
+    margin-bottom: 40px;
+}
+
+.margin-60 {
+    margin-bottom: 60px;
+}
+
+.center {
+    text-align: center;
+}
+
+.margin-45 {
+    margin-bottom: 45px;
+}
+
+/* Медиа-запрос для мобильных устройств */
+@media screen and (max-width: 767px) {
+
+    .container {
+        width: 320px; /* Зададим фиксированную ширину контейнера */
+        padding: 0 10px; /* Добавим небольшие отступы по бокам */
+    }
+
+    .slider {
+        height: 500px; /* Зададим фиксированную высоту слайдера */
+        overflow: hidden; /* Скрываем переполнение */
+    }
+
+    .slide {
+        flex-direction: column; /* Переставим текст и изображение на мобильных устройствах */
+        align-items: center; /* Центрируем контент */
+        height: 100%;
+    }
+
+    .banner {
+        flex-direction: column; /* Расположим контент баннера вертикально */
+        padding: 20px; /* Уменьшим отступы для мобильных устройств */
+        height: 100%;
+        justify-content: center; /* Центрируем контент */
+        text-align: center; /* Центрируем текст */
+    }
+
+    .text-content {
+        max-width: 100%;
+        margin-bottom: 20px;
+        margin-left: 0;
+        margin-top: 35px;
+    }
+
+    .text-content h1 {
+        font-size: 18px; /* Уменьшим размер заголовков для мобильных устройств */
+    }
+
+    .subtitle {
+        font-size: 14px; /* Уменьшим размер подзаголовков для мобильных устройств */
+    }
+
+    .subtitle-regular {
+        font-size: 14px;
+    }
+
+    .subtitle .highlight {
+        font-size: 24px; /* Уменьшим размер выделенного текста для мобильных устройств */
+    }
+
+    .text-content button {
+        width: 200px; /* Уменьшим размеры кнопки для мобильных устройств */
+        height: 45px;
+        font-size: 14px;
+        margin-top: 10px; /* Добавим отступ между контентом и кнопкой */
+    }
+
+    .image-content {
+        max-width: 100%;
+        margin-right: 0;
+    }
+
+    .image-content img {
+        width: calc(100% - 60px); /* Картинка будет занимать всю ширину за вычетом отступов */
+        height: auto;
+        margin-top: 20px; /* Добавим отступ сверху для картинки */
+        margin-bottom: 30px; /* Добавим отступ снизу для картинки */
+    }
+
+    .bg-shape {
+        background: none;
+    }
+}
